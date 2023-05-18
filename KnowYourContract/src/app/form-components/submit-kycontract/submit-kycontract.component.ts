@@ -13,15 +13,12 @@ export class SubmitKycontractComponent implements OnInit {
     teamWallet: new FormControl(''),
     projectName: new FormControl(''),
     projectContractAddress: new FormControl(''),
-    projectEmailAddress: new FormControl(''),
     projectWebsite: new FormControl(''),
     projectLogo: new FormControl(''),
     projectDescription: new FormControl(''),
-    projectDetails: new FormControl(''),
     projectCategory: new FormControl(''),
     network: new FormControl(''),
-    sourceCode: new FormControl(''),
-    docs: new FormControl('')
+    sourceCode: new FormControl('')
   });
 
   categories = [
@@ -52,6 +49,21 @@ export class SubmitKycontractComponent implements OnInit {
     {
       name: "Zero Knowledge",
     },
+  ];
+
+  networkOptions = [
+    {
+      network: "Polgon POS Mainnet",  
+    },
+    {
+      network: "Polygon Mumbai Testnet",
+    },
+    {
+      network: "Polygon zkEVM Mainnet",
+    },
+    {
+      network: "Polygon zkEVM Testnet",
+    }
   ];
 
   constructor() { }

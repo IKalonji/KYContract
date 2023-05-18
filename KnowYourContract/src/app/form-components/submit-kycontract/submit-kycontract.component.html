@@ -12,16 +12,13 @@
             <input id="submittor" type="text" placeholder="0x....." pInputText class="w-full mb-3" formControlName="submittorAddress">
     
             <label for="teamWallet" class="block text-900 font-medium mb-2">Team Wallet</label>
-            <input id="teamWallet" type="text" placeholder="0x....." pInputText class="w-full mb-3" formControlName="teamWalletAddress">
+            <input id="teamWallet" type="text" placeholder="0x....." pInputText class="w-full mb-3" formControlName="teamWallet">
 
             <label for="projectName" class="block text-900 font-medium mb-2">Project Name</label>
             <input id="projectName" type="text" placeholder="Project Name" pInputText class="w-full mb-3" formControlName="projectName">
 
             <label for="projectContractAddress" class="block text-900 font-medium mb-2">Project Contract Address</label>
             <input id="projectContractAddress" type="text" placeholder="0x....." pInputText class="w-full mb-3" formControlName="projectContractAddress">
-
-            <label for="projectEmailAddress" class="block text-900 font-medium mb-2">Project Email Address</label>
-            <input id="projectEmailAddress" type="text" placeholder="Project email" pInputText class="w-full mb-3" formControlName="projectEmailAddress">
 
             <label for="projectWebsite" class="block text-900 font-medium mb-2">Website</label>
             <input id="projectWebsite" type="text" placeholder="Website." pInputText class="w-full mb-3" formControlName="projectWebsite">
@@ -32,22 +29,27 @@
             <label for="projectDescription" class="block text-900 font-medium mb-2">Short Description (max 100 characters)</label>
             <input id="projectDescription" type="text" placeholder="Short Description" pInputText class="w-full mb-3" formControlName="projectDescription">
 
-            <label for="projectDescription" class="block text-900 font-medium mb-2">Short Description (max 100 characters)</label>
-            <input id="projectDescription" type="text" placeholder="" pInputText class="w-full mb-3" formControlName="projectDescription">
-
             <label for="projectDetails" class="block text-900 font-medium mb-2">Project Details (max 500 characters)</label>
             <input id="projectDetails" type="text" placeholder="0x....." pInputTextarea class="w-full mb-3" formControlName="projectDetails">
             
-            <p-multiSelect [options]="categories"  optionLabel="Category (You may select multiple)" formControlName="projectCategory"></p-multiSelect>
-            <!-- [(ngModel)]="selectedCities" -->
-            <!-- <div class="card flex align-items-center gap-2 flex-wrap">
-                <p-chip label="Action"></p-chip>
-                <p-chip label="Comedy"></p-chip>
-                <p-chip label="Mystery"></p-chip>
-                <p-chip label="Thriller" [removable]="true"></p-chip>
-            </div> -->
+            <label for="projectCategory" class="block text-900 font-medium mb-2">Project Category (You may select multiple)</label>
+            <p-multiSelect id="projectCategory" [options]="categories"  optionLabel="name" optionValue="name" class="w-full mb-3" formControlName="projectCategory"></p-multiSelect>
 
-            <p-chip label="Action"></p-chip>
+            <label for="network" class="block text-900 font-medium mb-2">Deployed Network</label>
+            <p-selectButton id="network" [options]="networkOptions" formControlName="network" optionLabel="network" optionValue="network" class="w-full mb-3"></p-selectButton>
+
+            <label for="sourceCode" class="block text-900 font-medium mb-2">Source Code</label>
+            <p-editor formControlName="sourceCode" [style]="{ height: '320px' }">
+                <ng-template pTemplate="header">
+                    <span class="ql-formats">
+                        <button type="button" class="ql-bold" aria-label="Bold"></button>
+                        <button type="button" class="ql-italic" aria-label="Italic"></button>
+                        <button type="button" class="ql-underline" aria-label="Underline"></button>
+                        <button type="button" class="ql-code-block" aria-label="CodeBlock"></button>
+                    </span>
+                </ng-template>
+            </p-editor>
+
             <div class="flex align-items-center justify-content-between mb-6">
                 <div class="flex align-items-center">
                     <label for="rememberme1" class="text-900">** All fields are manditory</label>

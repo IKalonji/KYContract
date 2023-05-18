@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule} from '@angular/forms';
 
@@ -22,6 +23,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { EditorModule } from 'primeng/editor';
 import { ChipModule } from 'primeng/chip';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 
 
@@ -35,6 +37,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
     ViewKycontractDetailsComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     CheckboxModule,
@@ -49,7 +52,8 @@ import { MultiSelectModule } from 'primeng/multiselect';
     InputTextareaModule,
     EditorModule,
     ChipModule,
-    MultiSelectModule
+    MultiSelectModule,
+    SelectButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
