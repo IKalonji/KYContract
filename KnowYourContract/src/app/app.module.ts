@@ -24,7 +24,9 @@ import { EditorModule } from 'primeng/editor';
 import { ChipModule } from 'primeng/chip';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { SelectButtonModule } from 'primeng/selectbutton';
-
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { DialogModule } from 'primeng/dialog';
+import { DividerModule } from 'primeng/divider';
 
 
 @NgModule({
@@ -53,7 +55,10 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     EditorModule,
     ChipModule,
     MultiSelectModule,
-    SelectButtonModule
+    SelectButtonModule,
+    DynamicDialogModule,
+    DialogModule,
+    DividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

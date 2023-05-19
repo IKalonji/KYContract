@@ -6,7 +6,7 @@
   </div>
   <div class="p-toolbar-group-end">
       <p-button label="Search Contract Scores" icon="pi pi-search" class="mr-2" [routerLink]="['/search-kycontract']"></p-button>
-      <p-button label="Submit Objection" icon="pi pi-times" styleClass="p-button-danger" [routerLink]="['/submit-objection']"></p-button>
+      <p-button label="Submit Objection" pTooltip="Submit KYContract; connected wallet required." icon="pi pi-times" styleClass="p-button-danger" [routerLink]="['/submit-objection']" [disabled]="!walletConnected"></p-button>
   </div>
 </p-toolbar>
 <router-outlet></router-outlet>

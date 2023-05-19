@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { WalletService } from 'src/app/services/wallet.service';
+import { Categories } from 'src/models/categories.model';
+import { NetworkOptions } from 'src/models/networks.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-submit-kycontract',
@@ -21,54 +25,17 @@ export class SubmitKycontractComponent implements OnInit {
     sourceCode: new FormControl('')
   });
 
-  categories = [
-    {
-      name: "DeFi",  
-    },
-    {
-      name: "GameFi",
-    },
-    {
-      name: "Social",
-    },
-    {
-      name: "Wallets",
-    },
-    {
-      name: "Infra",
-    },
-    {
-      name: "Storage",
-    },
-    {
-      name: "DAO",
-    },
-    {
-      name: "TradFi",
-    },
-    {
-      name: "Zero Knowledge",
-    },
-  ];
+  categories = Categories;
+  networkOptions = NetworkOptions;
 
-  networkOptions = [
-    {
-      network: "Polgon POS Mainnet",  
-    },
-    {
-      network: "Polygon Mumbai Testnet",
-    },
-    {
-      network: "Polygon zkEVM Mainnet",
-    },
-    {
-      network: "Polygon zkEVM Testnet",
-    }
-  ];
-
-  constructor() { }
+  constructor(private wallet:WalletService, private router: Router) { }
 
   ngOnInit(): void {
+    let _wallet = this.wallet.getConnectedWallet()
+    if (!_wallet){
+      alert("You need to connect your wallet to proceed")
+      this.router.navigate(["/"])
+    }
   }
 
   onSubmit(){

@@ -24,14 +24,11 @@
             <input id="projectWebsite" type="text" placeholder="Website." pInputText class="w-full mb-3" formControlName="projectWebsite">
 
             <label for="projectLogo" class="block text-900 font-medium mb-2">Logo</label>
-            <input id="projectLogo" type="file" placeholder="Logo" pInputText class="w-full mb-3" formControlName="projectLogo">
+            <input id="projectLogo" type="file" placeholder="Logo URL" pInputText class="w-full mb-3" formControlName="projectLogo">
 
             <label for="projectDescription" class="block text-900 font-medium mb-2">Short Description (max 100 characters)</label>
             <input id="projectDescription" type="text" placeholder="Short Description" pInputText class="w-full mb-3" formControlName="projectDescription">
 
-            <label for="projectDetails" class="block text-900 font-medium mb-2">Project Details (max 500 characters)</label>
-            <input id="projectDetails" type="text" placeholder="0x....." pInputTextarea class="w-full mb-3" formControlName="projectDetails">
-            
             <label for="projectCategory" class="block text-900 font-medium mb-2">Project Category (You may select multiple)</label>
             <p-multiSelect id="projectCategory" [options]="categories"  optionLabel="name" optionValue="name" class="w-full mb-3" formControlName="projectCategory"></p-multiSelect>
 
@@ -60,17 +57,3 @@
         </div>
     </div>
 </form>
-
-<!-- sumittorAddress: new FormControl(''),
-    teamWallet: new FormControl(''),
-    projecName: new FormControl(''),
-    projectContractAddress: new FormControl(''),
-    projectEmailAddress: new FormControl(''),
-    projectWebsite: new FormControl(''),
-    projectLogo: new FormControl(''),
-    projectDescription: new FormControl(''),
-    projectDetails: new FormControl(''),
-    projectCategory: new FormControl(''),
-    network: new FormControl(''),
-    sourceCode: new FormControl(''),
-    docs: new FormControl('') -->
