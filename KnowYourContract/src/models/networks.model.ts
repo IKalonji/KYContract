@@ -1,5 +1,8 @@
 export const NetworkOptions = [
     {
+      network: "Filecoin (FeVM)",  
+    },
+    {
       network: "Polgon POS Mainnet",  
     },
     {
