@@ -20,8 +20,8 @@ export class WalletService {
     }
 
     const chainId = await window.ethereum.request({ method: 'eth_chainId' });
-    if (chainId == 80001){
-      console.log("Polygon Mumbai connected"); 
+    if (chainId == 80001 || chainId == 3141){
+      console.log("Polygon Mumbai/Filecoin Hyperspace connected"); 
     }
     else {
       console.log("Not connected to Mumbai");

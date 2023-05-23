@@ -27,6 +27,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { DialogModule } from 'primeng/dialog';
 import { DividerModule } from 'primeng/divider';
+import { RatingModule } from 'primeng/rating';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { DividerModule } from 'primeng/divider';
     SelectButtonModule,
     DynamicDialogModule,
     DialogModule,
-    DividerModule
+    DividerModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

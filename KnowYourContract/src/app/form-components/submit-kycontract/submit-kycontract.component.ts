@@ -4,6 +4,7 @@ import { WalletService } from 'src/app/services/wallet.service';
 import { Categories } from 'src/models/categories.model';
 import { NetworkOptions } from 'src/models/networks.model';
 import { Router } from '@angular/router';
+import { AESService } from 'src/app/services/aes.service';
 
 @Component({
   selector: 'app-submit-kycontract',
@@ -28,7 +29,7 @@ export class SubmitKycontractComponent implements OnInit {
   categories = Categories;
   networkOptions = NetworkOptions;
 
-  constructor(private wallet:WalletService, private router: Router) { }
+  constructor(private wallet:WalletService, private router: Router, private encrypt: AESService) { }
 
   ngOnInit(): void {
     let _wallet = this.wallet.getConnectedWallet()
@@ -39,7 +40,8 @@ export class SubmitKycontractComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.kyContractForm.value)
+    console.log(typeof(this.kyContractForm.value))
+    // this.encrypt.encrypt(this.kyContractForm.value)
   }
 
 }
